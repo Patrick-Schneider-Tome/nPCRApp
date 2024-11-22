@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de nPCR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de nPCR</h1>
+
+    <form id="calcForm">
+      <label for="peso">Peso do paciente (kg):</label>
+      <input type="number" id="peso" required><br>
+
+      <label for="ureia_g">Ureia em 24h (g):</label>
+      <input type="number" id="ureia_g" step="0.01" required><br>
+
+      <label for="volume_ml">Volume urinário (ml):</label>
+      <input type="number" id="volume_ml" required><br>
+
+      <button type="button" onclick="calcular()">Converter e Calcular</button>
+    </form>
+
+    <div class="resultados">
+      <h3 id="ureiaResult">Ureia: -- mg/dL</h3>
+      <h3 id="npcrResult">nPCR: -- g/kg/dia</h3>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
